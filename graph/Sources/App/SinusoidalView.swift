@@ -26,6 +26,7 @@ class SinusoidalView: UIView {
 
     override init(frame: CGRect) {
         self.caLayer = CALayer()
+        self.caLayer.contentsScale = UIScreen.main.nativeScale
         self.drawerDelegate = DrawerDelegate()
         self.caLayer.delegate = self.drawerDelegate
 

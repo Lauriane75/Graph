@@ -42,7 +42,6 @@ class ViewController: UIViewController, SinusoidalDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        self.sinusoidalView.updateWithValues(sinusoidalManager.getData())
     }
 
     func animate(with data: [Float]) {
@@ -59,7 +58,7 @@ class ViewController: UIViewController, SinusoidalDelegate {
         NSLayoutConstraint.activate([
             self.sinusoidalView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             self.sinusoidalView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            self.sinusoidalView.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: -50),
+            self.sinusoidalView.widthAnchor.constraint(equalTo: self.view.widthAnchor),
             self.sinusoidalView.heightAnchor.constraint(equalTo: self.sinusoidalView.widthAnchor)
         ])
     }

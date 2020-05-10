@@ -33,19 +33,6 @@ class SinusoidalManager: NSObject {
         self.displayLink.preferredFramesPerSecond = 30
     }
 
-    // MARK: - Get data
-
-//    private var fakeData: [Float] {
-//        return (0...Int(100)).map { x -> Float in
-//            let value = (sin(Float(x) / 16 * 5) + Float(1)) / Float(2)
-//            return value
-//        }
-//    }
-//
-//    func getData() -> [Float] {
-//        return self.fakeData
-//    }
-
     // MARK: - View actions
 
     @objc private func animate(display: CADisplayLink) {
