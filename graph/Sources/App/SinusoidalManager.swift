@@ -30,7 +30,7 @@ class SinusoidalManager: NSObject {
         super.init()
         self.displayLink = CADisplayLink(target: self, selector: #selector(animate))
         self.displayLink.add(to: .main, forMode: .default)
-        self.displayLink.preferredFramesPerSecond = 30
+        self.displayLink.preferredFramesPerSecond = 2
     }
 
     // MARK: - View actions
@@ -38,7 +38,7 @@ class SinusoidalManager: NSObject {
     @objc private func animate(display: CADisplayLink) {
         self.i += displayLink.duration * 10
         let newData = (0...Int(100)).map { x -> Float in
-            let value = (sin(Float(Float(x) + Float(self.i)) / 16 * 5) + Float(1)) / Float(2)
+            let value = Float.random(in: 0...1)
             return value
         }
         self.delegate?.animate(with: newData)
